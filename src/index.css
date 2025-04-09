@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@font-face {
+  font-family: webFont;
+  src: url(PPNeueMontreal-Medium.431960c2.woff2);
+}
+body {
+  background-color: black;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-family: webFont;
+  color: white;
+  -ms-overflow-style: none;
+}
+canvas {
+  pointer-events: none;
+}
+span.growing {
+  background-color: rgb(252, 44, 43);
+}
+html.has-scroll-smooth {
+  overflow: hidden;
+  scrollbar-width: none;
+}
+[data-scroll-container] {
+  will-change: transform;
+}
+::-webkit-scrollbar {
+  display: none;
+}
