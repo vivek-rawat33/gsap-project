@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @font-face {
   font-family: webFont;
   src: url(PPNeueMontreal-Medium.431960c2.woff2);
@@ -25,4 +25,68 @@ html.has-scroll-smooth {
 }
 ::-webkit-scrollbar {
   display: none;
+} */
+
+@import "tailwindcss";
+
+/* Font setup */
+@font-face {
+  font-family: "webFont";
+  src: url("PPNeueMontreal-Medium.431960c2.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Base body styles */
+body {
+  background-color: black;
+  font-family: "webFont", sans-serif;
+  color: white;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Hide scrollbars */
+html.has-scroll-smooth {
+  overflow: hidden;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Decorative canvas */
+canvas {
+  pointer-events: none;
+}
+
+/* Accent span */
+span.growing {
+  background-color: rgb(252, 44, 43);
+}
+
+/* Scroll container for locomotive */
+[data-scroll-container] {
+  will-change: transform;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  body {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+    padding: 0 0.75rem;
+  }
 }
